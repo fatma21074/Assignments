@@ -8,6 +8,7 @@ namespace Task2.Interface
 {
     public interface IResizable
     {
-        void scale(double factor);
+        void Scale(double factor);
+      
     }
 }

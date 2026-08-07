@@ -9,6 +9,7 @@ namespace Task2
 {
     internal class Program
     {
+
         static void Main(string[] args)
         {
             //Circle circle = new Circle(5);
@@ -39,7 +40,7 @@ namespace Task2
                 if (shape is IResizable resizableShape)
                 {
                     Console.WriteLine("Scaling shape by a factor of 2.");
-                    resizableShape.scale(2);
+                    resizableShape.Scale(2);
                     Console.Write("New description after scaling: ");
                     shape.Describe();
                 }

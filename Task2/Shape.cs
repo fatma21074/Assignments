@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Task2.Interface;
 
 namespace Task2
 {
@@ -13,5 +14,6 @@ namespace Task2
         {
             Console.WriteLine($"This is a {this.GetType().Name} with area: {Area()}");
         }
+        
     }
 }

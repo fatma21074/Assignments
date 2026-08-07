@@ -23,6 +23,9 @@ namespace Task2
         public void Draw()
         {
             Console.WriteLine($"Drawing a triangle with base: {Base} and height: {Height}");
+            Console.WriteLine("  *");
+            Console.WriteLine(" ***");
+            Console.WriteLine("*****");
         }
     }
 }

@@ -23,11 +23,16 @@ namespace Task2
         public void Draw()
         {
             Console.WriteLine($"Drawing a rectangle with width: {Width} and height: {Height}");
+            Console.WriteLine("******");
+            Console.WriteLine("*    *");
+            Console.WriteLine("*    *");
+            Console.WriteLine("******");
         }
-        public void scale(double factor)
+        public void Scale(double factor)
         {
             Width *= factor;
             Height *= factor;
         }
+      
     }
 }

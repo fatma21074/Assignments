@@ -21,8 +21,11 @@ namespace Task2
         public void Draw()
         {
             Console.WriteLine($"Drawing a circle with radius: {Radius}");
+            Console.WriteLine(" *** ");
+            Console.WriteLine("*   *");
+            Console.WriteLine(" *** ");
         }
-        public void scale(double factor)
+        public void Scale(double factor)
         {
             Radius *= factor;
         }
