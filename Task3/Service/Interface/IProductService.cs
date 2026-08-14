@@ -4,12 +4,12 @@ namespace Task3.Service.Interface
 {
     public interface IProductService
     {
-        List<Product> GetAll();
-        Product? GetbyId(int id);
-        Product Add(Product product);
-        Product Update(Product product);
-        Product Delete(int id);
-        Product? UpdateName(int id, string name);
+        public List<Product> GetAll();
+        public Product? GetbyId(int id);
+        public Product Add(Product product);
+        public Product Update(Product product);
+        public Product Delete(int id);
+        public Product? UpdateName(int id, string name);
 
 
     }

@@ -3,12 +3,12 @@ namespace Task3.Repo.Interface
 {
     public interface IProductRepo
     {
-        List<Product> GetAll();
-        Product? GetbyId(int id);
-        Product Add(Product product);
-        Product Update(Product product);
-        Product Delete(int id);
-        Product? UpdateName(int id, string name);
+        public List<Product> GetAll();
+        public Product? GetbyId(int id);
+        public Product Add(Product product);
+        public Product Update(Product product);
+        public Product Delete(int id);
+        public Product? UpdateName(int id, string name);
 
     }
 }

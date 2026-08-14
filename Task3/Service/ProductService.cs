@@ -13,12 +13,20 @@ namespace Task3.Service
         }
         public Product Add(Product product)
         {
-           return _productRepo.Add(product);
-            
+            if (_productRepo.GetAll().Any(p => p.Name == product.Name))
+            {
+                throw new Exception("Product with the same name already exists.");
+            }
+            return _productRepo.Add(product);
+
         }
 
         public Product Delete(int id)
         {
+            if (_productRepo.GetAll().Any(p => p.Id == id) == false)
+            {
+                throw new Exception("Product with the given id does not exist.");
+            }
             return _productRepo.Delete(id);
 
         }
@@ -30,16 +38,29 @@ namespace Task3.Service
 
         public Product? GetbyId(int id)
         {
+            var product = _productRepo.GetbyId(id);
+            if (product == null)
+            {
+                throw new Exception("Product with the given id does not exist.");
+            }
             return _productRepo.GetbyId(id);
         }
 
         public Product Update(Product product)
         {
+            if (_productRepo.GetAll().Any(p => p.Id == product.Id) == false)
+            {
+                throw new Exception("Product with the given id does not exist.");
+            }
             return _productRepo.Update(product);
         }
 
         public Product? UpdateName(int id, string name)
         {
+            if (_productRepo.GetAll().Any(p => p.Id == id) == false)
+            {
+                throw new Exception("Product with the given id does not exist.");
+            }
             return _productRepo.UpdateName(id, name);
         }
     }

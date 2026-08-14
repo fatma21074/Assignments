@@ -24,10 +24,7 @@ namespace Task3.Controllers
         public IActionResult GetById(int id)
         {
             var product = _productService.GetbyId(id);
-            if (product == null)
-            {
-                return NotFound();
-            }
+
             return Ok(product);
         }
         [HttpPost]
@@ -39,10 +36,7 @@ namespace Task3.Controllers
         [HttpPut("{id}")]
         public IActionResult Update(int id, Product product)
         {
-            if (id != product.Id)
-            {
-                return BadRequest();
-            }
+
             var updatedProduct = _productService.Update(product);
             return Ok(updatedProduct);
         }
@@ -50,10 +44,7 @@ namespace Task3.Controllers
         public IActionResult UpdateName(int id, string name)
         {
             var updatedProduct = _productService.UpdateName(id, name);
-            if (updatedProduct == null)
-            {
-                return NotFound();
-            }
+
             return Ok(updatedProduct);
         }
 
