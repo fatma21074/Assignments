@@ -1,4 +1,5 @@
-﻿using Task3.Models;
+﻿using Microsoft.AspNetCore.Http.HttpResults;
+using Task3.Models;
 using Task3.Repo.Interface;
 using Task3.Service.Interface;
 
@@ -7,7 +8,7 @@ namespace Task3.Service
     public class ProductService : IProductService
     {
         private readonly IProductRepo _productRepo;
-      public  ProductService(IProductRepo productRepo)
+        public ProductService(IProductRepo productRepo)
         {
             _productRepo = productRepo;
         }
@@ -31,7 +32,7 @@ namespace Task3.Service
 
         }
 
-        public List<Product> GetAll()
+        public IEnumerable<Product> GetAll()
         {
             return _productRepo.GetAll();
         }

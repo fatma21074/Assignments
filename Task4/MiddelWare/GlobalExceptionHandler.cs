@@ -1,4 +1,6 @@
-﻿namespace Task4.MiddelWare
+﻿using Microsoft.AspNetCore.Mvc;
+
+namespace Task4.MiddelWare
 {
     public class GlobalExceptionHandler
     {
@@ -36,28 +38,39 @@
                 await HandleExceptionAsync(context, ex);
             }
         }
-        public static Task Invoke(HttpContext context, RequestDelegate next, ILogger<GlobalExceptionHandler> logger)
-        {
-            var globalException = new GlobalExceptionHandler(next, logger);
-            return globalException.InvokeAsync(context);
-        }
 
         private static Task HandleExceptionAsync(HttpContext context, Exception exception)
         {
-            context.Response.ContentType = "application/json";
-            context.Response.StatusCode = exception switch
+            context.Response.ContentType = "application/problem+json";
+
+            var statusCode = exception switch
             {
                 Exceptions.NotFoundException => StatusCodes.Status404NotFound,
                 Exceptions.ConflictException => StatusCodes.Status409Conflict,
-                Exceptions.DueDateInPastException => StatusCodes.Status400BadRequest,
+                Exceptions.DueDateInPastException => StatusCodes.Status422UnprocessableEntity,
                 _ => StatusCodes.Status500InternalServerError
             };
-            var result = new
+            context.Response.StatusCode = statusCode;
+
+            var title = exception switch
             {
-                error = exception.Message,
-                statusCode = context.Response.StatusCode
+                Exceptions.NotFoundException => "Resource not found",
+                Exceptions.ConflictException => "Conflict occurred",
+                Exceptions.DueDateInPastException => "Validation failed",
+                _ => "An unexpected error occurred."
             };
-            return context.Response.WriteAsJsonAsync(result);
+
+            var problem = new ProblemDetails
+            {
+                Status = statusCode,
+                Title = title,
+                Detail = statusCode == 500
+                    ? "Please contact support with your traceId."
+                    : exception.Message,
+                Instance = context.Request.Path
+            };
+
+            return context.Response.WriteAsJsonAsync(problem);
         }
     }
 }

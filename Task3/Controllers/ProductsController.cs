@@ -5,7 +5,7 @@ using Task3.Service.Interface;
 namespace Task3.Controllers
 {
     [ApiController]
-    [Route("api/product")]
+    [Route("/api/products")]
     public class ProductsController : ControllerBase
     {
 
@@ -52,7 +52,7 @@ namespace Task3.Controllers
         public IActionResult Delete(int id)
         {
             var deletedProduct = _productService.Delete(id);
-            return Ok(deletedProduct);
+            return NoContent();
         }
 
     }

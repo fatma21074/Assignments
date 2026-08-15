@@ -18,7 +18,7 @@ namespace Task4
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            builder.Services.AddScoped<IProductRepo, ProductRepo>();
+            builder.Services.AddSingleton<IProductRepo, ProductRepo>();
             builder.Services.AddScoped<IProductService, ProductService>();
 
             var app = builder.Build();
