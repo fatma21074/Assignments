@@ -4,7 +4,7 @@ namespace Task4.Service.Interface
 {
     public interface IProductService
     {
-        public List<Product> GetAll();
+        public IEnumerable<Product> GetAll();
         public Product? GetbyId(int id);
         public Product Add(Product product);
         public Product Update(Product product);
