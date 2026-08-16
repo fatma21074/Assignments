@@ -1,6 +1,6 @@
 ﻿namespace Task5.Models.Enums
 {
-    enum Status
+   public enum Status
     {
         pending,
         InProgress,
