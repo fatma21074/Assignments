@@ -10,11 +10,10 @@
         public async Task InvokeAsync(HttpContext context)
         {
 
-            // Check if the request is for a deprecated API version
             if (context.Request.Path.StartsWithSegments("/api/v1"))
             {
-                context.Response.Headers["sunset"] = "set to one year from today";
-               
+                context.Response.Headers["Sunset"] = DateTime.UtcNow.AddYears(1).ToString("R");   
+
             }
             await _next(context);
         }
