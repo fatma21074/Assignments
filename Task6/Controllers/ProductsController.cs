@@ -9,7 +9,8 @@ namespace Task6.Controllers
     public class ProductsController : ControllerBase
     {
         private readonly IProductService _productService;
-    public ProductsController(IProductService productService)
+        public ProductsController(IProductService productService)
+
         {
             _productService = productService;
         }

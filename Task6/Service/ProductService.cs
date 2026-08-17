@@ -8,6 +8,7 @@ namespace Task6.Service
     {
         private readonly IProductRepo _product;
     public ProductService(IProductRepo productRepo)
+
         {
             _product = productRepo;
         }

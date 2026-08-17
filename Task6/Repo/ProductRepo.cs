@@ -47,6 +47,8 @@ namespace Task6.Repo
             {
                 products = param.Order == "desc" ? products.OrderByDescending(keySelector) : products.OrderBy(keySelector);
             }
+
+            products = products.OrderByDescending(p => p.Name);
             products = products.Skip((param.Page - 1) * param.PageSize).Take(param.PageSize).ToList();
 
             return new PagedResult<Product>
