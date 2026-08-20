@@ -8,7 +8,7 @@ namespace Task7.Repo
     public class TaskItemRepo:ITaskItemsRepo
     {
         private readonly ApplicationDbContext _dbcontext;
-        public TasakItemRepo(ApplicationDbContext dbcontext)
+        public TaskItemRepo(ApplicationDbContext dbcontext)
         {
             _dbcontext = dbcontext;
         }
