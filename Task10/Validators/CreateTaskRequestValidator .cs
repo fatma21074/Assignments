@@ -11,7 +11,7 @@ namespace Task10.Validators
                 .WithMessage("Title is required")
                 .MaximumLength(200)
                 .WithMessage("Title must not exceed 200 characters.")
-                .Must(NotContainHtmlTags).WithMessage("Title must not contain HTML tags.");
+                .Must(name=>(!name.Contains(">")&&!name.Contains("<") && !name.Contains("?"))).WithMessage("Title must not contain HTML tags.");
 
             RuleFor(x => x.DueDate)
                 .GreaterThan(DateTime.UtcNow)
@@ -21,9 +21,6 @@ namespace Task10.Validators
         }
 
 
-        private bool NotContainHtmlTags(string title)
-        {
-            return !System.Text.RegularExpressions.Regex.IsMatch(title, "<.*?>");
-        }
+        
     }
 }

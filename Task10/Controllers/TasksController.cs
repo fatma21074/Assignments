@@ -11,6 +11,7 @@ namespace Task10.Controllers
         private static readonly List<TaskItem> _tasks = new();
         private static int _nextId = 1;
 
+
         [HttpPost]
         public IActionResult Create(CreateTaskRequest request)
         {
@@ -26,6 +27,7 @@ namespace Task10.Controllers
 
             return CreatedAtAction(nameof(GetById), new { id = task.Id }, task);
         }
+
 
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
