@@ -14,11 +14,8 @@ builder.Services.AddControllers();
 builder.Services.AddValidatorsFromAssemblyContaining<CreateTaskRequestValidator>();
 builder.Services.AddFluentValidationAutoValidation();
 
-
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
-
 var app = builder.Build();
 
 

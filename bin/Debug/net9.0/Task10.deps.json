@@ -1,0 +1,193 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "Task10/1.0.0": {
+        "dependencies": {
+          "FluentValidation.AspNetCore": "9.5.4",
+          "SharpGrip.FluentValidation.AutoValidation.Mvc": "2.0.0",
+          "Swashbuckle.AspNetCore.Swagger": "9.0.6",
+          "Swashbuckle.AspNetCore.SwaggerGen": "9.0.6",
+          "Swashbuckle.AspNetCore.SwaggerUI": "9.0.6"
+        },
+        "runtime": {
+          "Task10.dll": {}
+        }
+      },
+      "FluentValidation/10.0.0": {
+        "runtime": {
+          "lib/net5.0/FluentValidation.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "10.0.0.0"
+          }
+        }
+      },
+      "FluentValidation.AspNetCore/9.5.4": {
+        "dependencies": {
+          "FluentValidation": "10.0.0",
+          "FluentValidation.DependencyInjectionExtensions": "9.5.4"
+        },
+        "runtime": {
+          "lib/net5.0/FluentValidation.AspNetCore.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.5.4.0"
+          }
+        }
+      },
+      "FluentValidation.DependencyInjectionExtensions/9.5.4": {
+        "dependencies": {
+          "FluentValidation": "10.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.1.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.5.4.0"
+          }
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/2.1.0": {},
+      "Microsoft.OpenApi/1.6.25": {
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.OpenApi.dll": {
+            "assemblyVersion": "1.6.25.0",
+            "fileVersion": "1.6.25.0"
+          }
+        }
+      },
+      "SharpGrip.FluentValidation.AutoValidation.Mvc/2.0.0": {
+        "dependencies": {
+          "SharpGrip.FluentValidation.AutoValidation.Shared": "2.0.0"
+        },
+        "runtime": {
+          "lib/net9.0/SharpGrip.FluentValidation.AutoValidation.Mvc.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "SharpGrip.FluentValidation.AutoValidation.Shared/2.0.0": {
+        "dependencies": {
+          "FluentValidation": "10.0.0"
+        },
+        "runtime": {
+          "lib/net9.0/SharpGrip.FluentValidation.AutoValidation.Shared.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Swashbuckle.AspNetCore.Swagger/9.0.6": {
+        "dependencies": {
+          "Microsoft.OpenApi": "1.6.25"
+        },
+        "runtime": {
+          "lib/net9.0/Swashbuckle.AspNetCore.Swagger.dll": {
+            "assemblyVersion": "9.0.6.0",
+            "fileVersion": "9.0.6.1840"
+          }
+        }
+      },
+      "Swashbuckle.AspNetCore.SwaggerGen/9.0.6": {
+        "dependencies": {
+          "Swashbuckle.AspNetCore.Swagger": "9.0.6"
+        },
+        "runtime": {
+          "lib/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
+            "assemblyVersion": "9.0.6.0",
+            "fileVersion": "9.0.6.1840"
+          }
+        }
+      },
+      "Swashbuckle.AspNetCore.SwaggerUI/9.0.6": {
+        "runtime": {
+          "lib/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {
+            "assemblyVersion": "9.0.6.0",
+            "fileVersion": "9.0.6.1840"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Task10/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FluentValidation/10.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jNFPbLjBy/bfIWx4BV/WVEsS+1OxBVf22mmSdvVa9RCHJDkNhAjbKZkxgA0s1rYNFxVn+a1fQbos95t4j/z3Zg==",
+      "path": "fluentvalidation/10.0.0",
+      "hashPath": "fluentvalidation.10.0.0.nupkg.sha512"
+    },
+    "FluentValidation.AspNetCore/9.5.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-nb6RUGLlnMz0Ay/ihDqjagC/Rd2pg24qdxoPDLed5grCaHx6cXBmyzLqCCzGTtvpYS4i9bOwNvhbpRkXhV+VIA==",
+      "path": "fluentvalidation.aspnetcore/9.5.4",
+      "hashPath": "fluentvalidation.aspnetcore.9.5.4.nupkg.sha512"
+    },
+    "FluentValidation.DependencyInjectionExtensions/9.5.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jn1fxwhWJ20FJGYDJ1roozCBtnohtSIy//H/KTGgKBNriS7fUp9fTGs2GnTajK+Ei5k8UO1TUcPx6wBGEb32Zw==",
+      "path": "fluentvalidation.dependencyinjectionextensions/9.5.4",
+      "hashPath": "fluentvalidation.dependencyinjectionextensions.9.5.4.nupkg.sha512"
+    },
+    "Microsoft.Extensions.DependencyInjection.Abstractions/2.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8/CtASu80UIoyG+r8FstrmZW5GLtXxzoYpjj3jV0FKZCL5CiFgSH3pAmqut/dC68mu7N1bU6v0UtKKL3gCUQGQ==",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/2.1.0",
+      "hashPath": "microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512"
+    },
+    "Microsoft.OpenApi/1.6.25": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZahSqNGtNV7N0JBYS/IYXPkLVexL/AZFxo6pqxv6A7Uli7Q7zfitNjkaqIcsV73Ukzxi4IlJdyDgcQiMXiH8cw==",
+      "path": "microsoft.openapi/1.6.25",
+      "hashPath": "microsoft.openapi.1.6.25.nupkg.sha512"
+    },
+    "SharpGrip.FluentValidation.AutoValidation.Mvc/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QnTKNfcx4JzvMR/+hzqWFaXQgrbDSAU/xB9LVgh2povFQpySHTZH4gknulpNy2Hk6ELPy6YpglkEIS3P4E9IMA==",
+      "path": "sharpgrip.fluentvalidation.autovalidation.mvc/2.0.0",
+      "hashPath": "sharpgrip.fluentvalidation.autovalidation.mvc.2.0.0.nupkg.sha512"
+    },
+    "SharpGrip.FluentValidation.AutoValidation.Shared/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0DWoin27wm38K/O0zVS5yeWJld2eg588B+4wJSmVlISrOj3kGwRmWCEXFR8lTNWFnKpXHNOtrIo1vdZnhkhzQg==",
+      "path": "sharpgrip.fluentvalidation.autovalidation.shared/2.0.0",
+      "hashPath": "sharpgrip.fluentvalidation.autovalidation.shared.2.0.0.nupkg.sha512"
+    },
+    "Swashbuckle.AspNetCore.Swagger/9.0.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Bgyc8rWRAYwDrzjVHGbavvNE38G1Dfgf1McHYm+WUr4TxkvEAXv8F8B1z3Kmz4BkDCKv9A/1COa2t7+Ri5+pLg==",
+      "path": "swashbuckle.aspnetcore.swagger/9.0.6",
+      "hashPath": "swashbuckle.aspnetcore.swagger.9.0.6.nupkg.sha512"
+    },
+    "Swashbuckle.AspNetCore.SwaggerGen/9.0.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yYrDs5qpIa4UXP+a02X0ZLQs6HSd1C8t6hF6J1fnxoawi3PslJg1yUpLBS89HCbrDACzmwEGG25il+8aa0zdnw==",
+      "path": "swashbuckle.aspnetcore.swaggergen/9.0.6",
+      "hashPath": "swashbuckle.aspnetcore.swaggergen.9.0.6.nupkg.sha512"
+    },
+    "Swashbuckle.AspNetCore.SwaggerUI/9.0.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WGsw/Yop9b16miq8TQd4THxuEgkP5cH3+DX93BrX9m0OdPcKNtg2nNm77WQSAsA+Se+M0bTiu8bUyrruRSeS5g==",
+      "path": "swashbuckle.aspnetcore.swaggerui/9.0.6",
+      "hashPath": "swashbuckle.aspnetcore.swaggerui.9.0.6.nupkg.sha512"
+    }
+  }
+}

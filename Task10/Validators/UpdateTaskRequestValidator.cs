@@ -17,6 +17,9 @@ namespace Task10.Validators
                 .When(x => x.DueDate.HasValue)
                 .WithMessage("Due date must be in the future.");
         }
-       
+        private bool NotContainHtmlTags(string title)
+        {
+            return !System.Text.RegularExpressions.Regex.IsMatch(title, "<.*?>");
+        }
     }
 }
